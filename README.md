@@ -827,3 +827,189 @@ You > what are owasp top 10 vulnerabilities
 - 🌐 API security testing
 - ⚠️ Legal safety warnings
 
+
+## 💰 Stock Market Investment Advisory
+
+Get intelligent stock market recommendations based on your investment amount!
+
+### Investment Made Simple
+
+```bash
+# Just tell Jarvis your budget
+You > I want to invest 500 rupees
+You > invest 1000 rupees in short term
+You > I have 5000 rupees for long term investment
+```
+
+### Short-term (Intraday) Trading
+
+**When you say "short term" or "intraday":**
+- Buy in **morning** (9:30 AM - 11:00 AM)
+- Sell by **evening** (2:00 PM - 3:15 PM)
+- Same-day trading (no overnight holding)
+- 1-3% expected daily returns
+- Higher risk, requires monitoring
+
+```bash
+You > I want to invest 500 rupees in short term
+
+Jarvis: 📊 Short-term (Intraday) Recommendation
+        
+        Amount: ₹500
+        
+        Recommended Stock:
+        • TATAMOTORS (₹720)
+          BUY: 9:30 AM - 10:00 AM at ₹715
+          SELL: 2:30 PM - 3:15 PM at ₹735
+          Expected Return: 2-3%
+          Stop Loss: ₹705
+        
+        [Teaching mode explains everything!]
+```
+
+### Long-term Investment
+
+**When you say "long term":**
+- Hold for 1-5+ years
+- 12-18% annual returns
+- Lower risk, minimal monitoring
+- Get dividends
+- Wealth creation
+
+```bash
+You > I want to invest 1000 rupees long term
+
+Jarvis: 📈 Long-term Investment Recommendation
+        
+        Amount: ₹1000
+        
+        Recommended Stocks:
+        • ITC (₹420) - 2 shares
+          Expected: 15-20% per year
+          Dividend: 3.8%
+          Why: High dividend stock, diversified
+        
+        Investment Strategy:
+        • Use SIP (monthly investing)
+        • Review quarterly
+        • Don't panic sell
+        
+        [Complete educational guidance!]
+```
+
+### Trading Timing Advice
+
+**Intraday Best Times:**
+
+| Time | Action | Description |
+|------|--------|-------------|
+| 9:30 AM - 10:00 AM | **BUY** | Morning stability |
+| 10:00 AM - 11:00 AM | **BUY** | Best entry time |
+| 12:00 PM - 1:00 PM | **SELL** | Mid-day profit booking |
+| 2:00 PM - 3:15 PM | **SELL** | Pre-close exit |
+| 3:15 PM | **MANDATORY EXIT** | Square off all positions |
+
+**Avoid:**
+- 9:15 AM - 9:30 AM (extreme volatility)
+- 3:20 PM - 3:30 PM (closing rush)
+
+### Investment Strategies Compared
+
+| Feature | Short-term (Intraday) | Long-term |
+|---------|----------------------|-----------|
+| Holding | Same day | 1-5+ years |
+| Risk | Very High | Low-Medium |
+| Returns | 1-3% per day | 12-18% per year |
+| Monitoring | Full-time | Quarterly |
+| Suitable For | Experienced | Everyone |
+| Stress Level | High | Low |
+
+### With Teaching Mode
+
+```bash
+You > teach me
+You > explain stock market basics
+You > what is intraday trading
+You > difference between short and long term
+You > when should I buy stocks - morning or night
+
+[Jarvis explains everything in detail!]
+```
+
+### Stock Market Commands
+
+| Command | What It Does |
+|---------|--------------|
+| `invest 500 rupees` | Analyze investment options |
+| `invest 1000 rupees short term` | Intraday recommendations |
+| `invest 5000 rupees long term` | Long-term stocks |
+| `intraday trading today` | Current intraday picks |
+| `when to buy stocks` | Best timing advice |
+| `when to sell intraday` | Exit timing |
+| `teach me about stocks` | Educational content |
+
+### Legal & Safe Data Sources
+
+**We Use LEGAL Sources Only:**
+✅ Yahoo Finance API (real-time prices)
+✅ NSE/BSE Official Data (live market)
+✅ Alpha Vantage (professional data)
+✅ Public company filings
+✅ Legitimate financial news
+
+**We DO NOT Use:**
+❌ Dark web (ILLEGAL & BLOCKED)
+❌ Insider information (ILLEGAL)
+❌ Unauthorized sources
+❌ Manipulated data
+
+All recommendations based on PUBLIC, LEGAL, REAL-TIME data!
+
+### Example: Complete Investment Flow
+
+```bash
+# Start with teaching
+jarvis chat --teach
+
+# 1. Learn basics
+You > teach me about stock market
+[Jarvis explains concepts]
+
+# 2. Get recommendations
+You > I want to invest 1000 rupees short term
+[Jarvis analyzes and recommends]
+
+# 3. Understand timing
+You > when should I buy this stock
+[Jarvis: "Best time is 9:30 AM - 10:00 AM"]
+
+# 4. Learn strategy
+You > explain intraday trading strategy
+[Complete educational content]
+
+# 5. Make informed decision
+[You decide based on education and data]
+```
+
+### ⚠️ Important Disclaimer
+
+**This is for EDUCATIONAL PURPOSES ONLY:**
+- NOT financial advice
+- Consult SEBI-registered financial advisor
+- Past performance ≠ future results
+- You are responsible for decisions
+- Markets involve risk - you can lose money
+
+Always invest responsibly!
+
+### Features
+
+- 💰 Amount-based recommendations (₹500, ₹1000, etc.)
+- ⏰ Buy/sell timing for intraday
+- 📊 Short-term & long-term strategies
+- 🎓 Teaching mode explains everything
+- 📈 Real-time legal market data
+- 🔒 Safe & compliant
+- 📚 Investment education
+- ⚖️ Legal data sources only
+
