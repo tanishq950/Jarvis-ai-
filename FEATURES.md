@@ -65,6 +65,20 @@
 - Teaching mode explanations
 - Mac/Xcode integration
 
+### ✅ 8. Bug Hunting & Vulnerability Scanning
+**Find bugs by adding app link**
+- Comprehensive security scanning
+- SQL injection testing
+- XSS vulnerability detection
+- Directory enumeration
+- SSL/TLS security checks
+- WordPress scanning
+- API security testing
+- Mobile app security
+- OWASP Top 10 coverage
+- Automated report generation
+- Teaching mode for each vulnerability
+
 ## 🏗️ Architecture
 
 ### Core Components
@@ -82,13 +96,14 @@
 4. **Recon**: Security reconnaissance
 5. **Defender**: Security monitoring
 
-### Plugins (6)
+### Plugins (7)
 1. **Shell**: All Kali tools
 2. **Nmap**: Network scanning
 3. **Metasploit**: Exploitation framework
 4. **Git**: Version control
 5. **GitHub**: Repository management
 6. **Mobile Dev**: Android/iOS apps
+7. **Bug Hunter**: Vulnerability scanning
 
 ### Interfaces
 1. **CLI**: Interactive terminal
