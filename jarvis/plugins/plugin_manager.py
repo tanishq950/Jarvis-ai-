@@ -13,6 +13,8 @@ from .shell_plugin import ShellPlugin
 from .nmap_plugin import NmapPlugin
 from .metasploit_plugin import MetasploitPlugin
 from .git_plugin import GitPlugin
+from .github_plugin import GitHubPlugin
+from .mobile_dev_plugin import MobileDevPlugin
 
 
 class PluginManager:
@@ -32,7 +34,9 @@ class PluginManager:
             ShellPlugin(),
             NmapPlugin(),
             MetasploitPlugin(),
-            GitPlugin()
+            GitPlugin(),
+            GitHubPlugin(),
+            MobileDevPlugin()
         ]
         
         for plugin in plugins:

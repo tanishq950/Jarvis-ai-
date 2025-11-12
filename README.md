@@ -6,8 +6,10 @@ A comprehensive, modular Jarvis-like AI system for automation, security testing,
 
 - **Multi-Agent Architecture**: Specialized agents for different tasks (Supervisor, Coder, Tutor, Recon, Defender)
 - **Kali Linux Tool Integration**: Native support for nmap, metasploit, and all Kali tools
+- **GitHub Integration**: Create repos, manage projects, issues, and PRs directly
 - **Teaching Mode**: Learn while you work - detailed explanations for every action
 - **Live Execution Mode**: Run commands immediately with minimal confirmation
+- **Auto-Repair System**: Automatically detect and fix issues
 - **Policy-Based Security**: Fine-grained permission control and safety checks
 - **Plugin System**: Extensible architecture for adding new capabilities
 - **Memory System**: Short-term and long-term memory with vector storage
@@ -32,7 +34,30 @@ pip install -e .
 
 # Copy and configure environment
 cp .env.example .env
+
 # Edit .env with your settings
+# IMPORTANT: Add your GitHub token for GitHub integration
+# Get token from: https://github.com/settings/tokens
+nano .env
+```
+
+### GitHub Setup (Optional but Recommended)
+
+```bash
+# Set your GitHub credentials
+export GITHUB_TOKEN="your_github_personal_access_token"
+export GITHUB_USERNAME="your_username"
+
+# Or add to .env file
+echo "GITHUB_TOKEN=your_token_here" >> .env
+echo "GITHUB_USERNAME=your_username" >> .env
+
+# Install GitHub CLI (recommended)
+# On Debian/Ubuntu/Kali:
+sudo apt install gh
+
+# Authenticate
+gh auth login
 ```
 
 ### Running Jarvis
@@ -374,3 +399,70 @@ For issues, questions, or contributions:
 ---
 
 **Remember**: With great power comes great responsibility. Use Jarvis AI ethically and legally! 🦸‍♂️
+
+## 🐙 GitHub Integration
+
+Jarvis can manage your GitHub repositories and projects!
+
+### Create Repositories
+
+```bash
+You > create a GitHub repository called my-awesome-project
+You > make it a private repo with description "My awesome project"
+```
+
+### Manage Projects
+
+```bash
+You > create a new project board for my-repo
+You > create an issue in my-repo: "Add user authentication"
+You > make a pull request for my feature branch
+```
+
+### Clone and Work
+
+```bash
+You > clone my-repo from GitHub
+You > commit these changes with message "Add feature"
+You > push changes to GitHub
+```
+
+### With Teaching Mode
+
+```bash
+You > teach me about GitHub
+You > explain what a pull request is
+You > show me how to create a repository
+
+[Jarvis provides detailed explanations of GitHub concepts]
+```
+
+### GitHub Commands
+
+| Command | Action |
+|---------|--------|
+| `create repo <name>` | Create new repository |
+| `create project <name>` | Create project board |
+| `create issue <title>` | Create new issue |
+| `create pr <title>` | Create pull request |
+| `list repos` | List your repositories |
+| `clone <repo>` | Clone repository |
+| `commit changes` | Commit current changes |
+| `push to github` | Push commits |
+
+### API Usage
+
+```python
+import requests
+
+# Create a repository
+response = requests.post('http://localhost:8000/plugins/github/execute', json={
+    'action': 'create_repo',
+    'name': 'my-new-repo',
+    'description': 'Created via Jarvis AI',
+    'private': False
+})
+
+print(response.json())
+```
+

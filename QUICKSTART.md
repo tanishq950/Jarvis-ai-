@@ -366,3 +366,157 @@ Issues: https://github.com/tanishq950/Jarvis-ai-/issues
 ---
 
 **Remember**: Use responsibly and ethically! Always get proper authorization. 🦸‍♂️
+
+## 🐙 GitHub Integration
+
+### Setup GitHub
+
+```bash
+# Get a personal access token from GitHub
+# https://github.com/settings/tokens
+# Give it repo, project, and workflow permissions
+
+# Add to environment
+export GITHUB_TOKEN="your_token_here"
+export GITHUB_USERNAME="your_username"
+
+# Or add to .env
+echo "GITHUB_TOKEN=your_token" >> .env
+echo "GITHUB_USERNAME=your_username" >> .env
+
+# Install GitHub CLI (optional but recommended)
+sudo apt install gh
+gh auth login
+```
+
+### Create a Repository
+
+```bash
+You > create a GitHub repository called my-project
+Jarvis: Creating repository...
+        ✓ Repository created: https://github.com/yourname/my-project
+        
+        [With teaching mode, explains:]
+        - What a repository is
+        - How to use it
+        - Next steps
+```
+
+### Full Project Setup
+
+```bash
+You > teach me
+You > create a new GitHub project called awesome-app
+You > make it public with README
+You > create a project board for tracking
+You > create an issue: "Add user login feature"
+You > clone the repository
+You > commit changes with message "Initial setup"
+You > push to GitHub
+```
+
+### GitHub Commands Reference
+
+```bash
+# Repositories
+create repo <name>          - Create new repository
+list repos                  - List your repositories  
+clone <repo>                - Clone a repository
+
+# Projects
+create project <name>       - Create project board
+list projects               - List project boards
+
+# Issues
+create issue <title>        - Create new issue
+list issues                 - List issues
+
+# Pull Requests  
+create pr <title>           - Create pull request
+list prs                    - List pull requests
+
+# Code Management
+commit changes              - Commit current changes
+push to github              - Push commits
+pull from github            - Pull latest changes
+```
+
+### With Teaching Mode
+
+Every GitHub command provides educational context:
+
+```bash
+You > teach me
+You > explain GitHub
+
+Jarvis: GitHub is a platform for version control and collaboration.
+
+        Key Concepts:
+        • Repository: Storage for your project
+        • Commit: Snapshot of changes
+        • Branch: Parallel development line
+        • Pull Request: Propose changes
+        • Issue: Track bugs and features
+
+You > create a repository called learn-python
+
+Jarvis: Creating repository 'learn-python'...
+        
+        ✓ Created successfully!
+        
+        What is a repository?
+        A repository is like a project folder that tracks
+        all changes to your code over time.
+        
+        Next steps:
+        1. Clone: git clone https://github.com/you/learn-python
+        2. Add files to your project
+        3. Commit: Save your changes
+        4. Push: Upload to GitHub
+        5. Collaborate: Invite others
+        
+        GitHub Features Available:
+        • Issues: Track work and bugs
+        • Projects: Organize with kanban boards
+        • Actions: Automate workflows
+        • Wiki: Write documentation
+```
+
+## 🚀 Complete Example: New Project
+
+```bash
+# Start with all features
+jarvis chat --teach --auto-repair
+
+# Create and set up a new project
+You > create a GitHub repository called my-ai-bot
+Jarvis: ✓ Repository created
+        [Explains what happened and next steps]
+
+You > create a project board for my-ai-bot
+Jarvis: ✓ Project board created
+        [Explains kanban boards and workflow]
+
+You > create an issue: "Implement basic chat functionality"
+Jarvis: ✓ Issue #1 created
+        [Explains issues and how to use them]
+
+You > clone my-ai-bot
+Jarvis: ✓ Cloned to ./my-ai-bot
+        [Explains clone and next steps]
+
+You > generate a Python script for a chatbot
+Jarvis: ✓ Generated chatbot.py
+        [Explains the code with teaching mode]
+
+You > commit changes with message "Add chatbot script"
+Jarvis: ✓ Changes committed
+        [Explains commits and best practices]
+
+You > push to GitHub
+Jarvis: ✓ Pushed to GitHub
+        [Explains push and confirms success]
+
+# Your project is now live on GitHub!
+```
+

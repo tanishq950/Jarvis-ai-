@@ -370,6 +370,35 @@ class Orchestrator:
                     "command": command
                 }
         
+        # Check for GitHub operations
+        github_keywords = ["github", "repo", "repository", "project", "issue", "pull request", "pr"]
+        github_actions = {
+            "create repo": "create_repo",
+            "make repo": "create_repo",
+            "new repo": "create_repo",
+            "create repository": "create_repo",
+            "list repos": "list_repos",
+            "show repos": "list_repos",
+            "my repos": "list_repos",
+            "clone": "clone_repo",
+            "create issue": "create_issue",
+            "new issue": "create_issue",
+            "create project": "create_project",
+            "new project": "create_project",
+            "create pr": "create_pr",
+            "pull request": "create_pr",
+            "commit": "commit_changes",
+            "push": "push_changes",
+        }
+        
+        for keyword, action in github_actions.items():
+            if keyword in command_lower:
+                return {
+                    "action": "github_operation",
+                    "github_action": action,
+                    "command": command
+                }
+        
         # Check for agent-specific commands
         if any(word in command_lower for word in ["scan", "recon", "port"]):
             return {"action": "recon", "agent": "recon"}
