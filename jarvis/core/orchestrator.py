@@ -399,6 +399,32 @@ class Orchestrator:
                     "command": command
                 }
         
+        # Check for bug hunting operations
+        bug_hunting_keywords = ["scan", "find bugs", "vulnerability", "security test", "bug hunt"]
+        bug_hunting_actions = {
+            "find bugs": "comprehensive_scan",
+            "scan for bugs": "comprehensive_scan",
+            "security scan": "comprehensive_scan",
+            "vulnerability scan": "comprehensive_scan",
+            "bug hunt": "comprehensive_scan",
+            "quick scan": "quick_scan",
+            "web scan": "web_scan",
+            "sql injection": "sql_injection_test",
+            "test sql": "sql_injection_test",
+            "xss test": "xss_test",
+            "check ssl": "ssl_check",
+            "port scan": "port_scan",
+            "directory scan": "directory_scan",
+        }
+        
+        for keyword, action in bug_hunting_actions.items():
+            if keyword in command_lower:
+                return {
+                    "action": "bug_hunting",
+                    "bug_hunt_action": action,
+                    "command": command
+                }
+        
         # Check for agent-specific commands
         if any(word in command_lower for word in ["scan", "recon", "port"]):
             return {"action": "recon", "agent": "recon"}

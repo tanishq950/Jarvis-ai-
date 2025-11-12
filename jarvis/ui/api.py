@@ -397,3 +397,90 @@ def run_server(host: str = None, port: int = None):
 
 if __name__ == "__main__":
     run_server()
+
+@app.post("/bug-hunt/scan")
+async def bug_hunt_scan(request: dict):
+    """
+    Run vulnerability scan on target
+    
+    Body:
+    {
+        "target": "https://example.com",
+        "scan_type": "comprehensive|quick",
+        "deep": false
+    }
+    """
+    target = request.get("target")
+    scan_type = request.get("scan_type", "quick")
+    deep = request.get("deep", False)
+    
+    if not target:
+        return {"error": "Target URL required"}
+    
+    plugin = orchestrator.plugin_manager.get_plugin("bug_hunter")
+    if not plugin:
+        return {"error": "Bug hunter plugin not available"}
+    
+    if scan_type == "comprehensive":
+        result = plugin.execute("scan", target=target, deep=deep, teaching=True)
+    else:
+        result = plugin.execute("quick_scan", target=target, teaching=True)
+    
+    return result
+
+
+@app.post("/bug-hunt/sql-injection")
+async def test_sql_injection(request: dict):
+    """
+    Test for SQL injection vulnerabilities
+    
+    Body:
+    {
+        "target": "https://example.com/page?id=1"
+    }
+    """
+    target = request.get("target")
+    
+    if not target:
+        return {"error": "Target URL required"}
+    
+    plugin = orchestrator.plugin_manager.get_plugin("bug_hunter")
+    if not plugin:
+        return {"error": "Bug hunter plugin not available"}
+    
+    result = plugin.execute("sql_injection", target=target, teaching=True)
+    return result
+
+
+@app.post("/bug-hunt/xss")
+async def test_xss(request: dict):
+    """
+    Test for XSS vulnerabilities
+    
+    Body:
+    {
+        "target": "https://example.com"
+    }
+    """
+    target = request.get("target")
+    
+    if not target:
+        return {"error": "Target URL required"}
+    
+    plugin = orchestrator.plugin_manager.get_plugin("bug_hunter")
+    if not plugin:
+        return {"error": "Bug hunter plugin not available"}
+    
+    result = plugin.execute("xss", target=target, teaching=True)
+    return result
+
+
+@app.get("/bug-hunt/report")
+async def get_bug_hunt_report():
+    """Get bug hunting report"""
+    plugin = orchestrator.plugin_manager.get_plugin("bug_hunter")
+    if not plugin:
+        return {"error": "Bug hunter plugin not available"}
+    
+    result = plugin.execute("report", format="json", teaching=True)
+    return result

@@ -15,6 +15,7 @@ from .metasploit_plugin import MetasploitPlugin
 from .git_plugin import GitPlugin
 from .github_plugin import GitHubPlugin
 from .mobile_dev_plugin import MobileDevPlugin
+from .bug_hunter_plugin import BugHunterPlugin
 
 
 class PluginManager:
@@ -36,7 +37,8 @@ class PluginManager:
             MetasploitPlugin(),
             GitPlugin(),
             GitHubPlugin(),
-            MobileDevPlugin()
+            MobileDevPlugin(),
+            BugHunterPlugin()
         ]
         
         for plugin in plugins:

@@ -466,3 +466,364 @@ response = requests.post('http://localhost:8000/plugins/github/execute', json={
 print(response.json())
 ```
 
+
+## 📱 Mobile App Development
+
+Create Android and iOS apps with ease!
+
+### Supported Frameworks
+
+- **React Native**: JavaScript/React cross-platform apps
+- **Flutter**: Dart-based beautiful native apps
+- **Native Android**: Kotlin/Java for Android-specific apps
+- **Native iOS**: Swift/SwiftUI for iOS-specific apps
+
+### Create Mobile Apps
+
+```bash
+# React Native (cross-platform)
+You > create a React Native app called AwesomeApp
+You > run the app on Android
+You > build for iOS
+
+# Flutter (cross-platform)
+You > create a Flutter app called MyFlutterApp  
+You > run on Android emulator
+You > build APK for release
+
+# Native development
+You > teach me about native Android development
+You > teach me about iOS with SwiftUI
+```
+
+### Complete Mobile Project Workflow
+
+```bash
+# Start with teaching mode
+jarvis chat --teach
+
+# 1. Check your setup
+You > check mobile development setup
+
+# 2. Create GitHub repo
+You > create a GitHub repository called mobile-game
+
+# 3. Create the app
+You > create a React Native app called mobile-game
+
+# 4. Develop (make your changes)
+
+# 5. Commit and push
+You > commit changes with message "Add game logic"
+You > push to GitHub
+
+# 6. Build for release
+You > build the app for Android
+You > build the app for iOS
+```
+
+### Framework Comparison
+
+| Feature | React Native | Flutter | Native |
+|---------|-------------|---------|---------|
+| Language | JavaScript | Dart | Kotlin/Swift |
+| Performance | Good | Excellent | Best |
+| UI | Platform | Custom | Platform |
+| Learning Curve | Easy (if know React) | Medium | Steep |
+| Code Reuse | High | Very High | None |
+| Community | Large | Growing | Huge |
+
+### With Teaching Mode
+
+```bash
+You > teach me about mobile development
+[Explains platforms, approaches, frameworks]
+
+You > explain React Native vs Flutter
+[Detailed comparison with pros/cons]
+
+You > show me how to create an Android app
+[Step-by-step guide with explanations]
+
+You > explain mobile app architecture
+[Teaches best practices and patterns]
+```
+
+### Mobile Dev Commands
+
+| Command | Action |
+|---------|--------|
+| `create <framework> app <name>` | Create new app |
+| `check mobile setup` | Verify tools installed |
+| `run app on android` | Run on Android |
+| `run app on ios` | Run on iOS |
+| `build for android` | Build Android APK |
+| `build for ios` | Build iOS IPA |
+| `explain <framework>` | Learn about framework |
+
+
+## 🔍 Bug Hunting & Vulnerability Scanning
+
+Find security bugs automatically when you add an app link!
+
+### Automated Vulnerability Detection
+
+```bash
+# Quick security scan
+You > quick scan https://example.com
+
+# Comprehensive bug hunt
+You > find bugs in https://example.com
+
+# With teaching mode - explains everything
+You > teach me
+You > scan for bugs in https://mywebsite.com
+```
+
+### Supported Scan Types
+
+#### 1. Comprehensive Scan
+Full security assessment with multiple tools:
+- Port scanning (Nmap)
+- Web vulnerability scanning (Nikto)
+- SQL injection testing (SQLMap)
+- Directory enumeration (Dirb)
+- SSL/TLS security check
+- Security header analysis
+
+```bash
+You > find bugs in https://target.com
+You > comprehensive scan of https://app.example.com
+You > security scan https://website.com
+```
+
+#### 2. Quick Scan
+Fast security check for rapid assessment:
+- Open ports and services
+- Common web vulnerabilities
+- Basic security issues
+
+```bash
+You > quick scan https://example.com
+You > fast security check on https://target.com
+```
+
+#### 3. Specific Vulnerability Tests
+
+**SQL Injection:**
+```bash
+You > test sql injection on https://site.com/page?id=1
+You > check for sql vulnerabilities in https://app.com/login
+```
+
+**Cross-Site Scripting (XSS):**
+```bash
+You > test xss on https://example.com
+You > check for xss vulnerabilities
+```
+
+**SSL/TLS Security:**
+```bash
+You > check ssl for example.com
+You > verify ssl certificate of website.com
+```
+
+**Directory Enumeration:**
+```bash
+You > scan directories on https://example.com
+You > find hidden files on website.com
+```
+
+**WordPress Security:**
+```bash
+You > scan wordpress site https://blog.example.com
+You > check wordpress security
+```
+
+### Vulnerability Types Detected
+
+| Vulnerability | Severity | Impact |
+|--------------|----------|---------|
+| SQL Injection | Critical | Database compromise |
+| XSS (Cross-Site Scripting) | High | Session hijacking |
+| Broken Authentication | High | Account takeover |
+| Sensitive Data Exposure | High | Data breach |
+| XML External Entities | High | Server compromise |
+| Broken Access Control | High | Unauthorized access |
+| Security Misconfiguration | Medium | System weakness |
+| Insecure Deserialization | High | Remote code execution |
+| Known Vulnerabilities | Varies | Depends on CVE |
+| Insufficient Logging | Low | Missed attacks |
+
+### Complete Bug Hunting Workflow
+
+```bash
+# Start with teaching mode
+jarvis chat --teach
+
+# 1. Get authorization (REQUIRED!)
+You > I have permission to test https://myapp.com
+
+# 2. Quick reconnaissance
+You > quick scan https://myapp.com
+
+# 3. Comprehensive analysis
+You > find bugs in https://myapp.com
+
+# 4. Specific tests based on findings
+You > test sql injection on https://myapp.com/api/users?id=1
+You > test xss on https://myapp.com/search
+You > check ssl for myapp.com
+
+# 5. Generate report
+You > generate bug hunting report
+
+# Every step includes detailed explanations!
+```
+
+### With Teaching Mode
+
+```bash
+You > teach me about bug hunting
+[Explains methodology, OWASP Top 10, tools]
+
+You > explain sql injection
+[Details: how it works, impact, prevention]
+
+You > explain owasp top 10
+[Lists and explains common vulnerabilities]
+
+You > what is xss
+[Teaches about cross-site scripting]
+```
+
+### API Security Testing
+
+```bash
+You > scan api https://api.example.com
+You > test api authentication
+You > check api rate limiting
+```
+
+### Mobile App Security
+
+```bash
+You > scan android app /path/to/app.apk
+You > analyze ios app security
+```
+
+### Bug Hunting Commands
+
+| Command | Action |
+|---------|--------|
+| `find bugs in <url>` | Comprehensive scan |
+| `quick scan <url>` | Fast assessment |
+| `test sql injection on <url>` | SQL injection test |
+| `test xss on <url>` | XSS vulnerability test |
+| `check ssl for <domain>` | SSL/TLS security |
+| `scan directories on <url>` | Find hidden files |
+| `scan wordpress site <url>` | WordPress security |
+| `scan api <url>` | API security test |
+| `generate bug hunting report` | Create report |
+
+### Tools Integrated
+
+- **Nmap**: Network scanning & service detection
+- **Nikto**: Web server vulnerability scanner
+- **SQLMap**: Automated SQL injection testing
+- **Dirb**: Directory & file enumeration
+- **WPScan**: WordPress vulnerability scanner
+- **OpenSSL**: SSL/TLS security analysis
+- **Nuclei**: Template-based scanning
+- **Custom Scripts**: Additional security checks
+
+### Security Report Generation
+
+```bash
+You > generate bug hunting report
+[Creates detailed report with:]
+- Executive summary
+- Vulnerability details
+- Severity ratings
+- Remediation steps
+- Technical information
+```
+
+### OWASP Top 10 Coverage
+
+✅ A1: Injection (SQL, NoSQL, OS command)
+✅ A2: Broken Authentication  
+✅ A3: Sensitive Data Exposure
+✅ A4: XML External Entities (XXE)
+✅ A5: Broken Access Control
+✅ A6: Security Misconfiguration
+✅ A7: Cross-Site Scripting (XSS)
+✅ A8: Insecure Deserialization
+✅ A9: Using Components with Known Vulnerabilities
+✅ A10: Insufficient Logging & Monitoring
+
+### Legal & Ethical Usage
+
+⚠️ **IMPORTANT - READ CAREFULLY:**
+
+**LEGAL REQUIREMENTS:**
+- ✅ Always get **written permission** before scanning
+- ✅ Only scan systems you own or are authorized to test
+- ✅ Follow responsible disclosure practices
+- ❌ Unauthorized scanning is **ILLEGAL**
+- ❌ Never use for malicious purposes
+
+**AUTHORIZATION:**
+```bash
+# Before any scan, confirm authorization
+You > I have written permission to test https://target.com
+Jarvis: ✓ Authorization noted. Proceeding with scan...
+```
+
+**RESPONSIBLE DISCLOSURE:**
+1. Find vulnerability responsibly
+2. Document findings clearly
+3. Report to organization privately
+4. Give time to fix (90 days typical)
+5. Public disclosure only after fix
+
+### Real-World Examples
+
+**Example 1: Testing Your Website**
+```bash
+You > teach me
+You > I own https://mywebsite.com
+You > find bugs in https://mywebsite.com
+[Jarvis performs comprehensive scan]
+You > generate report
+[Get detailed security assessment]
+```
+
+**Example 2: Bug Bounty Program**
+```bash
+You > I'm authorized for https://bugbounty.com
+You > quick scan https://bugbounty.com
+You > test sql injection on https://bugbounty.com/api?id=1
+[If vulnerable, follow responsible disclosure]
+```
+
+**Example 3: Learning Security**
+```bash
+You > teach me about bug hunting
+You > explain how sql injection works
+You > show me xss examples
+You > what are owasp top 10 vulnerabilities
+```
+
+### Features
+
+- 🔍 Automated vulnerability scanning
+- 🎓 Teaching mode explains everything
+- 📊 Detailed security reports
+- ⚡ Quick and comprehensive scans
+- 🛡️ OWASP Top 10 coverage
+- 🔧 Multiple security tools
+- 📱 Mobile app testing
+- 🌐 API security testing
+- ⚠️ Legal safety warnings
+
