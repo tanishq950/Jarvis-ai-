@@ -2,16 +2,16 @@
 Agent Manager - Manages agent lifecycle and coordination
 """
 from typing import Dict, List, Optional, Any
-from .base import BaseAgent, AgentRole, AgentStatus, AgentOrchestrator
-from ..core.policy_engine import PolicyEngine
-from ..core.logger import logger
+from ..agents.base import BaseAgent, AgentRole, AgentStatus, AgentOrchestrator
+from .policy_engine import PolicyEngine
+from .logger import logger
 
 # Import specific agents
-from .supervisor import SupervisorAgent
-from .codegen import CodeGenAgent
-from .tutor import TutorAgent
-from .recon import ReconAgent
-from .defender import DefenderAgent
+from ..agents.supervisor import SupervisorAgent
+from ..agents.codegen import CodeGenAgent
+from ..agents.tutor import TutorAgent
+from ..agents.recon import ReconAgent
+from ..agents.defender import DefenderAgent
 
 
 class AgentManager:

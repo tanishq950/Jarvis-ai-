@@ -520,11 +520,17 @@ class AutoRepairSystem:
         else:
             health = "healthy"
         
+        # Calculate component health (for compatibility)
+        total_components = 5  # Policy, Memory, Agents, Plugins, Auto-repair
+        healthy_components = total_components - (1 if critical else 0)
+        
         return {
             "status": health,
             "unresolved_issues": len(unresolved),
             "critical_issues": len(critical),
             "auto_repair_enabled": self.auto_repair_enabled,
+            "total_components": total_components,
+            "healthy_components": healthy_components,
             "message": self._get_health_message(health, len(unresolved), len(critical))
         }
     
