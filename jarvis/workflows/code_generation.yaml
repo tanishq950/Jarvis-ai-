@@ -1,0 +1,33 @@
+name: code_generation_workflow
+description: Generate code with review and teaching
+trigger: manual
+
+steps:
+  - agent: supervisor
+    task: "Assess code generation request"
+    
+  - agent: codegen
+    task: "Generate code based on requirements"
+    params:
+      language: "${language}"
+      requirements: "${requirements}"
+    
+  - agent: tutor
+    task: "Explain generated code"
+    params:
+      code: "${generated_code}"
+      language: "${language}"
+    
+  - plugin: shell
+    action: "explain"
+    params:
+      command: "python ${output_file}"
+    
+  - agent: supervisor
+    task: "Approve code execution"
+
+context:
+  language: "python"
+  requirements: "List files in directory"
+  output_file: "list_files.py"
+  teaching_mode: true

@@ -1,0 +1,35 @@
+name: basic_recon_workflow
+description: Basic reconnaissance workflow with teaching mode
+trigger: manual
+
+steps:
+  - agent: supervisor
+    task: "Assess if target scan permitted"
+    params:
+      action_type: "pentest.scan"
+      resource: "${target}"
+    
+  - agent: tutor
+    task: "Explain reconnaissance process"
+    params:
+      topic: "network reconnaissance"
+      detail_level: "medium"
+    
+  - plugin: nmap
+    action: "quick_scan"
+    params:
+      target: "${target}"
+      teaching: true
+    
+  - agent: tutor
+    task: "Analyze scan results"
+    params:
+      context: "${previous_result}"
+    
+  - agent: supervisor
+    task: "Review and approve report generation"
+
+context:
+  target: "example.com"
+  authorization: "required"
+  learning_mode: true

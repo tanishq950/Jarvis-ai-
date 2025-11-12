@@ -1,0 +1,76 @@
+name: github_project_setup
+description: Create and set up a new GitHub project
+trigger: manual
+
+steps:
+  - agent: tutor
+    task: "Explain GitHub project setup"
+    params:
+      topic: "github basics"
+      detail_level: "medium"
+  
+  - agent: supervisor
+    task: "Approve repository creation"
+    params:
+      action_type: "github.create_repo"
+  
+  - plugin: github
+    action: "create_repo"
+    params:
+      name: "${project_name}"
+      description: "${project_description}"
+      private: false
+      auto_init: true
+      teaching: true
+  
+  - plugin: github
+    action: "create_project"
+    params:
+      repo: "${project_name}"
+      name: "${project_name} Roadmap"
+      description: "Project planning and tracking"
+      teaching: true
+  
+  - plugin: github
+    action: "create_issue"
+    params:
+      repo: "${project_name}"
+      title: "Initial setup and documentation"
+      body: "Set up project structure and README"
+      labels: ["enhancement", "documentation"]
+      teaching: true
+  
+  - plugin: github
+    action: "clone"
+    params:
+      repo: "${github_username}/${project_name}"
+      teaching: true
+  
+  - agent: codegen
+    task: "Generate README template"
+    params:
+      language: "markdown"
+      requirements: "Project README with structure"
+  
+  - plugin: git
+    action: "commit"
+    params:
+      message: "Initial commit: Add README"
+      teaching: true
+  
+  - plugin: github
+    action: "push"
+    params:
+      branch: "main"
+      teaching: true
+  
+  - agent: tutor
+    task: "Summarize what was created"
+    params:
+      topic: "github project created"
+
+context:
+  project_name: "my-new-project"
+  project_description: "A new project created with Jarvis AI"
+  github_username: "${GITHUB_USERNAME}"
+  teaching_mode: true
