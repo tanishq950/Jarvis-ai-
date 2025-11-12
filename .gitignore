@@ -1,0 +1,75 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+jarvis/logs/*.log
+logs/*.log
+
+# Models (large files)
+jarvis/models/*.bin
+jarvis/models/*.gguf
+jarvis/models/*.safetensors
+
+# Data
+jarvis/data/embeddings/*.db
+jarvis/data/embeddings/*.pkl
+*.db
+*.sqlite
+
+# Secrets
+.env
+secrets/
+*.pem
+*.key
+allowed_targets.json
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# OS
+Thumbs.db
+.Trash-*
+
+# Temporary
+/tmp/
+*.tmp

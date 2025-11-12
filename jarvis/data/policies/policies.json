@@ -1,0 +1,92 @@
+{
+  "policies": {
+    "pentest.scan": {
+      "requires_confirmation": true,
+      "allowed_targets_file": "data/policies/allowed_targets.json",
+      "rate_limit_per_hour": 10,
+      "dry_run_default": true,
+      "log_level": "verbose"
+    },
+    "pentest.exploit": {
+      "requires_confirmation": true,
+      "allowed_targets_file": "data/policies/allowed_targets.json",
+      "rate_limit_per_hour": 5,
+      "dry_run_default": true,
+      "requires_supervisor_approval": true
+    },
+    "file.read": {
+      "allowed_paths": ["~", "/tmp", "/var/log"],
+      "restricted_paths": ["/etc/shadow", "/etc/passwd", "/root"],
+      "log_level": "info"
+    },
+    "file.write": {
+      "restricted_paths": ["/etc", "/root", "/sys", "/proc"],
+      "requires_diff_preview": true,
+      "backup_before_write": true,
+      "log_level": "verbose"
+    },
+    "file.delete": {
+      "restricted_paths": ["/etc", "/root", "/sys", "/proc", "/usr", "/bin"],
+      "requires_confirmation": true,
+      "backup_before_delete": true
+    },
+    "shell.execute": {
+      "whitelist_commands": ["ls", "cat", "grep", "find", "git", "python", "pip", "npm"],
+      "blacklist_commands": ["rm -rf /", "dd", "mkfs", ":(){ :|:& };:"],
+      "requires_confirmation": true,
+      "sandbox_mode": true,
+      "log_level": "verbose"
+    },
+    "network.outbound": {
+      "blocked_ports": [25, 465, 587],
+      "requires_confirmation": false,
+      "log_level": "verbose",
+      "rate_limit_per_minute": 100
+    },
+    "network.scan": {
+      "allowed_targets_file": "data/policies/allowed_targets.json",
+      "requires_confirmation": true,
+      "log_level": "verbose"
+    },
+    "code.generate": {
+      "requires_review": true,
+      "run_static_analysis": true,
+      "max_file_size_kb": 1000,
+      "log_level": "info"
+    },
+    "code.execute": {
+      "sandbox_mode": true,
+      "timeout_seconds": 300,
+      "requires_confirmation": true,
+      "log_level": "verbose"
+    },
+    "data.collect": {
+      "respect_robots_txt": true,
+      "rate_limit_per_second": 1,
+      "log_level": "info"
+    },
+    "system.install": {
+      "requires_confirmation": true,
+      "allowed_package_managers": ["pip", "npm", "apt"],
+      "log_level": "verbose"
+    }
+  },
+  "global_settings": {
+    "default_dry_run": false,
+    "audit_all_actions": true,
+    "require_user_confirmation_threshold": "medium",
+    "session_timeout_minutes": 30,
+    "max_concurrent_agents": 10
+  },
+  "trust_levels": {
+    "low": {
+      "requires_confirmation_for": ["pentest.*", "file.write", "file.delete", "shell.execute", "code.execute"]
+    },
+    "medium": {
+      "requires_confirmation_for": ["pentest.*", "file.delete", "shell.execute"]
+    },
+    "high": {
+      "requires_confirmation_for": ["pentest.exploit"]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+name: learning_session
+description: Interactive learning session about security tools
+trigger: manual
+
+steps:
+  - agent: tutor
+    task: "Introduction to penetration testing"
+    params:
+      topic: "pentesting fundamentals"
+      detail_level: "beginner"
+  
+  - plugin: shell
+    action: "explain"
+    params:
+      command: "nmap -sV target.com"
+  
+  - agent: tutor
+    task: "Explain nmap scan types"
+    params:
+      topic: "nmap scan techniques"
+  
+  - plugin: nmap
+    action: "explain"
+    params:
+      target: "example.com"
+      flags: "-sV -sC"
+  
+  - agent: tutor
+    task: "Security and legal considerations"
+    params:
+      topic: "ethical hacking guidelines"
+  
+  - agent: tutor
+    task: "Next steps and practice recommendations"
+
+context:
+  learning_mode: true
+  pace: "slow"
+  include_examples: true

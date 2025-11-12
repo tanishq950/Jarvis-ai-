@@ -1,0 +1,12 @@
+{
+  "allowed_targets": [
+    {
+      "domain": "example.com",
+      "ip_range": "192.168.1.0/24",
+      "authorization": "Written permission on file",
+      "expiry": "2025-12-31",
+      "notes": "Example target - replace with actual authorized targets"
+    }
+  ],
+  "disclaimer": "Only add targets you have explicit written authorization to test. Unauthorized testing is illegal."
+}
