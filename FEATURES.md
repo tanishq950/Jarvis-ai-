@@ -150,14 +150,16 @@ jarvis chat --live --teach --auto-repair
 
 ## 📊 Statistics
 
-- **Total Lines of Code**: ~6,000+
-- **Python Modules**: 30+
+- **Total Lines of Code**: ~8,000+
+- **Python Modules**: 35+
 - **Agents**: 5 specialized
-- **Plugins**: 6 extensible
-- **API Endpoints**: 20+
+- **Plugins**: 7 extensible
+- **API Endpoints**: 25+
 - **Workflows**: 4 examples
 - **Kali Tools Supported**: 30+
 - **Mobile Frameworks**: 4 (React Native, Flutter, Android, iOS)
+- **Security Tools**: 7+ (Nmap, Nikto, SQLMap, Dirb, WPScan, etc.)
+- **Vulnerability Types**: 10+ (OWASP Top 10)
 
 ## 🎓 Teaching Mode Features
 
@@ -170,6 +172,10 @@ jarvis chat --live --teach --auto-repair
 - Git and version control
 - API development
 - Testing strategies
+- Bug hunting methodology
+- OWASP Top 10 vulnerabilities
+- Vulnerability assessment
+- Responsible disclosure
 
 ### How It Teaches
 - Detailed explanations
@@ -229,6 +235,16 @@ You > explain metasploit
 You > show me hydra examples
 You > teach me about GitHub
 You > explain mobile frameworks
+You > what is sql injection
+You > explain owasp top 10
+```
+
+### 5. Bug Hunting
+```bash
+You > I have permission to test https://mywebsite.com
+You > find bugs in https://mywebsite.com
+You > test sql injection on the login page
+You > generate bug hunting report
 ```
 
 ## 💡 Key Innovations
@@ -348,7 +364,8 @@ Jarvis AI is a comprehensive, production-ready AI system that:
 ✅ Connects to GitHub
 ✅ Creates Android apps
 ✅ Creates iOS apps
+✅ Finds security bugs automatically
 
-Perfect for security testing, development, learning, and automation!
+Perfect for security testing, development, learning, bug hunting, and automation!
 
 **Built with ❤️ to be the most comprehensive Jarvis-like AI system.**

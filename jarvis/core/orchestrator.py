@@ -425,6 +425,45 @@ class Orchestrator:
                     "command": command
                 }
         
+        # Check for stock market operations
+        stock_keywords = ["invest", "stock", "share", "rupees", "intraday", "long term", "short term"]
+        stock_actions = {
+            "invest": "analyze_investment",
+            "investment": "analyze_investment",
+            "stock": "recommend_stocks",
+            "share": "recommend_stocks",
+            "intraday": "intraday_trading",
+            "short term": "short_term_strategy",
+            "long term": "long_term_strategy",
+            "day trading": "intraday_trading",
+        }
+        
+        # Check if command contains stock-related keywords
+        for keyword in stock_keywords:
+            if keyword in command_lower:
+                # Extract amount if present
+                import re
+                amount_match = re.search(r'(\d+)\s*(?:rupees|rs|inr|₹)?', command_lower)
+                amount = float(amount_match.group(1)) if amount_match else None
+                
+                # Determine action
+                for action_keyword, action in stock_actions.items():
+                    if action_keyword in command_lower:
+                        return {
+                            "action": "stock_market",
+                            "stock_action": action,
+                            "amount": amount,
+                            "command": command
+                        }
+                
+                # Default stock action
+                return {
+                    "action": "stock_market",
+                    "stock_action": "analyze_investment",
+                    "amount": amount,
+                    "command": command
+                }
+        
         # Check for agent-specific commands
         if any(word in command_lower for word in ["scan", "recon", "port"]):
             return {"action": "recon", "agent": "recon"}

@@ -16,6 +16,7 @@ from .git_plugin import GitPlugin
 from .github_plugin import GitHubPlugin
 from .mobile_dev_plugin import MobileDevPlugin
 from .bug_hunter_plugin import BugHunterPlugin
+from .stock_market_plugin import StockMarketPlugin
 
 
 class PluginManager:
@@ -38,7 +39,8 @@ class PluginManager:
             GitPlugin(),
             GitHubPlugin(),
             MobileDevPlugin(),
-            BugHunterPlugin()
+            BugHunterPlugin(),
+            StockMarketPlugin()
         ]
         
         for plugin in plugins:
